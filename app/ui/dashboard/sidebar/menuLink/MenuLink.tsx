@@ -15,7 +15,7 @@ const MenuLink = ({item}: {
   
   return (
     <div className={route === item.path ? `${styles.container} ${styles.active}` : `${styles.container}`}>
-        <Link className={styles.link}  href="">
+        <Link className={styles.link}  href={item.path}>
             {item.icon}
             <span>{item.title}</span>
         </Link>

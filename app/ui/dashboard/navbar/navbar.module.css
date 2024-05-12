@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--bgSoft);
+}
+
+.title{
+    color: var(--text);
+    font-size: 24px;
+    text-transform: capitalize;
+    align-self: center;
+}
+
+.navSection{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.searchDiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2e374a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input{
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: white;
+
+}
+
+.input:focus{
+    outline: none;
+}
+
+.buttons{
+    border: none;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    font-size: 20px;
+    color: var(--text);
+}

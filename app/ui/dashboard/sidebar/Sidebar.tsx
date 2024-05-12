@@ -98,8 +98,7 @@ const Sidebar = () => {
           <span className={styles.cat}>{cat.title}</span>
           {cat.list.map((list)=> (
               <MenuLink item={list} key={list.title}/>
-      ))}
-
+          ))}
         </li>)
       })}
     </div>
