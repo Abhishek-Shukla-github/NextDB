@@ -16,17 +16,6 @@ const Layout = ({children}:{
         </div>
         <div className={styles.content}>
             <Navbar />
-            <div className={styles.cards}>
-              <Card />
-              <Card />
-              <Card />
-            </div>
-            <div className={styles.chart}>
-              <Chart />
-            </div>
-            <div className={styles.rightBar}>
-              <Rightbar />
-            </div>
             {children}
         </div>
     </div>
