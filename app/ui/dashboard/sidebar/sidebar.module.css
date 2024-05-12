@@ -29,9 +29,29 @@
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
-/* 
+
+.logout{
+    background: var(--bgSoft);
+    border: none;
+    color: var(--text);
+    font-size: 18px;
+    padding: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.logout:hover{
+    background-color: #2e374a;
+}
+/*  
 .sublist{
     padding: 10px;
     display: flex;
@@ -40,8 +60,4 @@
     width: 100%;
     margin: 5px 0;
     border-radius: 10px;
-}
-
-.sublist:hover, .active{
-    background-color: #2e374a;
 } */
