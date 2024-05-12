@@ -8,3 +8,10 @@
 .content{
     flex-grow: 6;
 }
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    height: 25%;
+    width: 70%;
+}
