@@ -2,6 +2,7 @@ import Search from "@/app/ui/dashboard/search/Search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Pagination from "@/app/ui/dashboard/pagination/pagination";
 
 const UsersPage = async ({ searchParams }) => {
   let user = {
@@ -68,7 +69,7 @@ return (
           </tr>
       </tbody>
     </table>
-    {/* <Pagination count={count} /> */}
+    <Pagination />
   </div>
 );
 };
