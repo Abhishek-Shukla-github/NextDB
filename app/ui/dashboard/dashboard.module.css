@@ -3,10 +3,12 @@
 }
 
 .menu{
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    width: 20%;
 }
 .content{
-    flex-grow: 6;
+    /* flex-grow: 6; */
+    width: 78%;
 }
 
 .cards{
