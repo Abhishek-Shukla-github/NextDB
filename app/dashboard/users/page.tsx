@@ -6,7 +6,8 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchUsers } from "@/app/lib/data";
 
 const UsersPage = async ({ searchParams }) => {
-  let users = await fetchUsers()
+  
+  let users = await fetchUsers(searchParams.q)
 return (
   <div className={styles.container}>
     <div className={styles.top}>
