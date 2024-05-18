@@ -4,16 +4,11 @@ import styles from "@/app/ui/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import { fetchProducts } from '@/app/lib/data';
 
-const Page = () => {
-    let products = [{
-        id:1,
-        title: "Table",
-        desc: "A Table!",
-        price: 1,
-        createdAt: 12,
-        stock: 4
-    }]
+const Page = async ({searchParams}) => {
+    const products = await fetchProducts(searchParams.q)
+    // console.log("propducts", products)
   return (
     <div className={styles.container}>
     <div className={styles.top}>
@@ -50,7 +45,7 @@ const Page = () => {
             </td>
             <td>{product.desc}</td>
             <td>${product.price}</td>
-            <td>{product.createdAt}</td>
+            <td>{product.createdAt.toDateString()}</td>
             <td>{product.stock}</td>
             <td>
               <div className={styles.buttons}>

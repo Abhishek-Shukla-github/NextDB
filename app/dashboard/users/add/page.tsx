@@ -1,26 +1,39 @@
+// import { addUser } from "@/app/lib/actions";
+import { addUser } from "@/app/test/actions";
 import styles from "@/app/ui/dashboard/users/addUsers/addUsers.module.css";
 
-const AddProductPage = () => {
+const AddUserPage = () => {
   return (
     <div className={styles.container}>
-      <form className={styles.form}>
-        <input type="text" placeholder="title" name="title" required />
-        <select name="cat" id="cat">
-          <option value="general">Choose a Category</option>
-          <option value="kitchen">Kitchen</option>
-          <option value="phone">Phone</option>
-          <option value="computer">Computer</option>
-        </select>
-        <input type="number" placeholder="price" name="price" required />
-        <input type="number" placeholder="stock" name="stock" required />
-        <input type="text" placeholder="color" name="color" />
-        <input type="text" placeholder="size" name="size" />
-        <textarea
+      <form action={addUser} className={styles.form}>
+        <input type="text" placeholder="username" name="username" required />
+        <input type="email" placeholder="email" name="email" required />
+        <input
+          type="password"
+          placeholder="password"
+          name="password"
           required
-          name="desc"
-          id="desc"
-          rows="16"
-          placeholder="Description"
+        />
+        <input type="phone" placeholder="phone" name="phone" />
+        <select name="isAdmin" id="isAdmin">
+          <option value={false}>
+            Is Admin?
+          </option>
+          <option value={true}>Yes</option>
+          <option value={false}>No</option>
+        </select>
+        <select name="isActive" id="isActive">
+          <option value={true}>
+            Is Active?
+          </option>
+          <option value={true}>Yes</option>
+          <option value={false}>No</option>
+        </select>
+        <textarea
+          name="address"
+          id="address"
+          rows={16}
+          placeholder="Address"
         ></textarea>
         <button type="submit">Submit</button>
       </form>
@@ -28,4 +41,4 @@ const AddProductPage = () => {
   );
 };
 
-export default AddProductPage;
+export default AddUserPage;
